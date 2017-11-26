@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     @yield('css')
   </head>
-  <body class="skin-green sidebar-mini" style="height: auto; min-height: 100%;">
-    <div class="wrapper">
+  <body class="skin-green sidebar-mini" style="height: auto; min-height: 100%;" >
+    <div class="wrapper" id="frontPanel">
       @include('layout.recursos.header.index')
       @include('layout.recursos.left_menu.index')
       <div class="content-wrapper">
@@ -41,6 +41,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.2/js/adminlte.min.js" integrity="sha256-M/+/xbAPBtc0W7JWnReOYF+oPZq4OiOUrlP9qbv7w64=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.2/js/demo.js" integrity="sha256-FJs2lhA7yGqzK+bE6sYNwziPqEg8nJnRtf/ZTw+8wIA=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
     @yield('scripts')
   </body>
 </html>
