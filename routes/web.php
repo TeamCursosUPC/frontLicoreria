@@ -19,6 +19,13 @@ Route::get('/home', function () {
     return view('admin');
 });
 
-Route::get('/usuarios', function () {
-    return 'Usuarios';
+Route::get('/productos', function () {
+    return view('productos.index');
 });
+
+Route::get('/clientes', function () {
+    return view('clientes.index');
+});
+
+
+
