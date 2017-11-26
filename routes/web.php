@@ -19,6 +19,10 @@ Route::get('/home', function () {
     return view('admin');
 });
 
+Route::get('/locales', function () {
+    return view('locales.index');
+});
+
 Route::get('/productos', function () {
     return view('productos.index');
 });
