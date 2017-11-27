@@ -19,17 +19,23 @@ Route::get('/home', function () {
     return view('admin');
 });
 
-Route::get('/locales', function () {
+Route::get('/productos', function () {
     return view('locales.index');
 });
 
-Route::get('/productos', function () {
-    return view('productos.index');
-});
+Route::get('/locales',
+    array('as' => 'showLocal', function () { return view('locales.index'); })
+);
 
-Route::get('/clientes', function () {
-    return view('clientes.index');
-});
+
+Route::get('/locales/create', 
+    array('as' => 'createLocal', function () { return view('locales.create'); })
+);
+
+Route::get('/locales/update', function () { return view('locales.update'); });
+
+
+Route::get('/clientes', function () { return view('clientes.index'); });
 
 
 

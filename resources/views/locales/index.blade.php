@@ -1,55 +1,76 @@
 @extends('layout.layout-admin')
 @section('title', 'Locales')
 @section('content')
-<div class="box box-primary">
-    <div class="box-header with-border">
+<div class="box box-primary" id="app">
+    <div class="box-header">
         <h3 class="box-title">Locales y/o Sedes</h3>
+        <div class="box-tools">
+            <div class="btn-group pull-right">
+                <a href="{{ route('createLocal') }}" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Crear</a>
+                <a v-on:click="loadLocales()" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a>
+                <a v-on:click="loadLocales()" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
+            </div>
+        </div>
     </div>
-    <form role="form">
-        <div class="box-body">
-            <div class="col-md-6">
-                <div class="box-body">
-                    <div class="form-group">
-                        <label>Nombre del Local</label>
-                        <input type="text" class="form-control" id="namelocal" placeholder="Nombre del Local">
-                    </div>
-                    <div class="form-group">
-                        <label>Persona de Contacto</label>
-                        <input type="text" class="form-control" id="nameContacto" placeholder="Supervisor General ">
-                    </div>
-                    <div class="form-group">
-                        <label>Direccion</label>
-                        <input type="text" class="form-control" id="address" placeholder="Av Aviacion 3115 - Referencia estacion San Borja Sur">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">    
-                <div class="box-body">
-                    <div class="form-group">
-                        <label>Seleccionar Distrito</label>
-                        <select class="form-control" id="idDistrito">
-                            <option selected="selected">-</option>
-                            <option>San Borja</option>
-                            <option>Surquillo</option>
-                            <option>Miraflores</option>
-                            <option>San Isidro</option>
-                        </select>
-                    </div>
-                     <div class="form-group">
-                        <label>Telefono Contacto</label>
-                        <input type="text" class="form-control" id="numerPhone" placeholder="Supervisor General ">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box-footer">
-            <div class="col-md-3 col-md-offset-4 col-xs-4 col-xs-offset-3">
-                <button type="button" class="btn btn-warning btnForm"><i class="fa fa-close"></i> Cancelar</button>
-                <button type="button" class="btn btn-primary btnForm"><i class='fa fa-plus'></i> Crear Local</button>
-                <button type="button" class="btn btn-info btnLoad"  style="display: none"><i class="fa fa-spin fa-spinner"></i> Cargando</button>
-                
-            </div>
-        </div>
-    </form>
+    <div class="box-body">
+        <table id="table-list-locales" class="table table-bordered display nowrap table-responsive" cellspacing="0" width="100%" >
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre del Local</th>
+                    <th>Distrito</th>
+                    <th>Persona de Contacto</th>
+                    <th>Telefono de Contacto</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 </div>
 @endsection
+
+@section('scripts')
+<script type="text/javascript">
+    $(document).ready(function() {
+        window.dataLocal = {
+            url: 'http://licoreria.localhost.pe:8088/api/pruebas',
+            type: 'GET'
+        }
+
+        window.columnsLocal = [
+			{ 'data' : 'id'},
+			{ 'data' : 'nombre' },
+			{ 'data' : 'distrito' },
+			{ 'data' : 'persona_contacto' },
+            { 'data' : 'telefono_contacto' },
+            { 'data' : 'estado' }
+        ]
+
+        window.tableLocal = $('#table-list-locales').DataTable({
+            'deferRender': true,
+            'processing': true,
+            'ajax': dataLocal,
+            'paging': true,
+            'pageLength': 100,
+            'lengthMenu': [100, 200, 300, 400, 500],
+            'scrollY': '300px',
+            'scrollX': true,
+            'scrollCollapse': true,
+            'select': true,
+            'language': dataTables_lang_spanish(),
+            'columns': columnsLocal
+        })
+
+        $('#table-list-locales tbody').on( 'dblclick', 'tr', function () {
+            var dataRow = tableLocal.row(this).data()
+            alert( 'Clicked row id ' + dataRow.id );
+        } );
+    });
+</script>
+@stop
+
+
+    
+
+
+
