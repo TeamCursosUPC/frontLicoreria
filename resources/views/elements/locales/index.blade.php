@@ -1,6 +1,3 @@
-@extends('layout.layout-admin')
-@section('title', 'Locales')
-@section('content')
 <div class="box box-primary" id="app">
     <div class="box-header">
         <h3 class="box-title">Locales y/o Sedes</h3>
@@ -27,9 +24,6 @@
         </table>
     </div>
 </div>
-@endsection
-
-@section('scripts')
 <script type="text/javascript">
     $(document).ready(function() {
         window.dataLocal = {
@@ -68,7 +62,6 @@
         } );
     });
 </script>
-@stop
 
 
     

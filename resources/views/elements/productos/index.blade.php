@@ -1,6 +1,3 @@
-@extends('layout.layout-admin')
-@section('title', 'Licoreria')
-@section('content')
 <div class="box box-primary">
     <div class="box-header with-border">
         <h3 class="box-title">Crear Productos</h3>
@@ -40,4 +37,3 @@
         </div>
     </form>
 </div>
-@endsection

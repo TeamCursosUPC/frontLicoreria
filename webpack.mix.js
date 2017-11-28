@@ -11,10 +11,10 @@ let mix = require('laravel-mix')
  |
  */
 
-mix.js([
-  'resources/assets/js/app.js',
-  'resources/assets/js/datatable.js'
-], 'public/js/app.js')
+mix.js('resources/assets/js/app.js', 'public/js')
+mix.js('resources/assets/js/datatable.js', 'public/js')
 
-//mix.js('resources/assets/js/app.js', 'public/js')
+mix.copy('resources/assets/css/preloader.css', 'public/css')
+
+// mix.js('resources/assets/js/app.js', 'public/js')
 // .sass('resources/assets/sass/app.scss', 'public/css')

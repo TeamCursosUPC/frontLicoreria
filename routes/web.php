@@ -14,23 +14,37 @@ Route::get('/', function () {
     return view('admin');
 });
 
-Route::get('/productos', function () {
-    return view('productos.index');
-});
+/** Resource Route de Clientes */
+Route::get('/productos',
+    array('as' => 'showProducto', function () { return view('elements.productos.index'); })
+);
 
+Route::get('/productos/create', 
+    array('as' => 'createProducto', function () { return view('elements.productos.create'); })
+);
+
+Route::get('/productos/edit', 
+    array('as' => 'updateProducto', function () { return view('elements.productos.update'); })
+);
+
+
+/** Resource Route de Locales */
 Route::get('/locales',
-    array('as' => 'showLocal', function () { return view('locales.index'); })
+    array('as' => 'showLocal', function () { return view('elements.locales.index'); })
 );
 
 Route::get('/locales/create', 
-    array('as' => 'createLocal', function () { return view('locales.create'); })
+    array('as' => 'createLocal', function () { return view('elements.locales.create'); })
 );
 
 Route::get('/locales/edit', 
-    array('as' => 'updateLocal', function () { return view('locales.update'); })
+    array('as' => 'updateLocal', function () { return view('elements.locales.update'); })
 );
 
-Route::get('/clientes', function () { return view('clientes.index'); });
+
+
+/** Resource Route de Clientes */
+Route::get('/clientes', function () { return view('elements.clientes.index'); });
 
 
 

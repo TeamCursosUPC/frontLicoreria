@@ -26,7 +26,7 @@ Route::get('/pruebas', function (Request $request) {
         "data" => [
             [
                 "id" => "1",
-                "nombre" => "System Architect",
+                "nombre" => "Alan",
                 "distrito" => "Edinburgh",
                 "persona_contacto" => "5421",
                 "telefono_contacto" => "2011/04/25",
@@ -34,7 +34,7 @@ Route::get('/pruebas', function (Request $request) {
             ],
             [
                 "id" => "2",
-                "nombre" => "a Architect",
+                "nombre" => "Cornejo",
                 "distrito" => "Edinburgh",
                 "persona_contacto" => "5421",
                 "telefono_contacto" => "2011/04/25",
@@ -42,7 +42,7 @@ Route::get('/pruebas', function (Request $request) {
             ],
             [
                 "id" => "3",
-                "nombre" => "z Architect",
+                "nombre" => "Zalazar",
                 "distrito" => "Edinburgh",
                 "persona_contacto" => "5421",
                 "telefono_contacto" => "2011/04/25",
