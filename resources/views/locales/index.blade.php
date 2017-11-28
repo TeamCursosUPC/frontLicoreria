@@ -33,7 +33,8 @@
 <script type="text/javascript">
     $(document).ready(function() {
         window.dataLocal = {
-            url: 'http://licoreria.localhost.pe:8088/api/pruebas',
+            // url: 'http://licoreria.localhost.pe:8088/api/pruebas',
+            url: 'api/pruebas',
             type: 'GET'
         }
 

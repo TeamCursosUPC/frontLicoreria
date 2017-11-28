@@ -5,8 +5,6 @@
  * @param  {String} route     [Ruta a la cual va a consultar los datos a cargar]
  */
 window.dataTables = (nombreDIV, data, columns) => {
-  // Eliminación del DataTable en caso de que exista
-  // $('#' + nombreDIV).dataTable().fnDestroy()
   // Creacion del DataTable
   $('#' + nombreDIV).DataTable({
     'deferRender': true,

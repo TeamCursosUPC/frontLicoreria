@@ -3,6 +3,9 @@ require('./bootstrap')
 window.Vue = require('vue')
 const async = require('async')
 
+const prueba = 'hola'
+
+
 window.vueFrontPanel = new Vue({
   el: '#frontPanel',
   data: {
