@@ -18,7 +18,7 @@
     
     @yield('css')
   </head>
-  <body class="skin-green sidebar-mini" style="height: auto; min-height: 100%;" >
+  <body class="skin-purple sidebar-mini" style="height: auto; min-height: 100%;" >
     <div class="wrapper" id="frontPanel">
       @include('layout.recursos.header.index')
       @include('layout.recursos.left_menu.index')
@@ -49,6 +49,7 @@
     <script src="https://cdn.datatables.net/rowreorder/1.2.3/js/dataTables.rowReorder.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.2.3/js/dataTables.select.min.js"></script>
     <script src="https://cdn.datatables.net/plug-ins/1.10.16/sorting/absolute.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tinysoap@1.0.2/tinysoap-browser-min.min.js"></script>
     
     <script src="{{ URL::asset('js/app.js') }}"></script>
     @yield('scripts')
