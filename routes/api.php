@@ -25,27 +25,30 @@ Route::get('/pruebas', function (Request $request) {
         "recordsTotal" => 10,
         "data" => [
             [
-                "id" => "1",
-                "nombre" => "Alan",
-                "distrito" => "Edinburgh",
-                "persona_contacto" => "5421",
-                "telefono_contacto" => "2011/04/25",
+                "id" => 1,
+                "nombre" => "Licoreria 32",
+                "distrito" => "Santiago de Surco",
+                "nombre_contacto" => "Alan Cornejo",
+                "telefono_contacto" => "98689745",
+                "createdAt" => "2017-11-20 03:54:32.540Z",
                 "estado" => "$320,800"
             ],
             [
-                "id" => "2",
-                "nombre" => "Cornejo",
-                "distrito" => "Edinburgh",
-                "persona_contacto" => "5421",
-                "telefono_contacto" => "2011/04/25",
+                "id" => 2,
+                "nombre" => "San Juanito",
+                "distrito" => "Monterico",
+                "nombre_contacto" => "Yessenia Montalvo",
+                "telefono_contacto" => "974125684",
+                "createdAt" => "2017-11-18 01:54:32.540Z",
                 "estado" => "$320,800"
             ],
             [
-                "id" => "3",
-                "nombre" => "Zalazar",
-                "distrito" => "Edinburgh",
-                "persona_contacto" => "5421",
-                "telefono_contacto" => "2011/04/25",
+                "id" => 3,
+                "nombre" => "24Nigth",
+                "distrito" => "San Isidro",
+                "nombre_contacto" => "Sebastian Quiroz",
+                "telefono_contacto" => "98635277",
+                "createdAt" => "2017-11-29T03:54:32.540Z",
                 "estado" => "$320,800"
             ]
         ]

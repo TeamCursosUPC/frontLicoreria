@@ -36,7 +36,7 @@
 			{ 'data' : 'id'},
 			{ 'data' : 'nombre' },
 			{ 'data' : 'distrito' },
-			{ 'data' : 'persona_contacto' },
+			{ 'data' : 'nombre_contacto' },
             { 'data' : 'telefono_contacto' },
             { 'data' : 'estado' }
         ]

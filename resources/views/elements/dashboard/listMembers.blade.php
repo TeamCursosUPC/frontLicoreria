@@ -2,10 +2,10 @@
   <!-- USERS LIST -->
   <div class="box box-danger">
     <div class="box-header with-border">
-      <h3 class="box-title">Latest Members</h3>
+      <h3 class="box-title">Clientes Frecuentes</h3>
 
       <div class="box-tools pull-right">
-        <span class="label label-danger">8 New Members</span>
+        <span class="label label-danger">8 Miembros</span>
         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
         </button>
         <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
