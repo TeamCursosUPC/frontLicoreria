@@ -32,7 +32,7 @@ window.vueFrontPanel = new Vue({
       alert(JSON.stringify(this.form))
     },
 
-    loadOptionMenu: function (route) {
+    loadOptionMenu(route) {
       $('#container').html('<div class="loading" id="loading" style="display: inline;"><li></li><li></li><li></li><li></li><li></li></div>')
       axios.get(`/${route}`)
         .then(response => {
