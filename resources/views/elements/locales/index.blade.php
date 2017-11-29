@@ -1,6 +1,6 @@
 <div class="box box-primary" id="app">
     <div class="box-header">
-        <h3 class="box-title">Locales y/o Sedes</h3>
+        <h3 class="box-title">Listar Locales y/o Sedes</h3>
         <div class="box-tools">
             <div class="btn-group pull-right">
                 <a href="{{ route('createLocal') }}" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Crear</a>
@@ -26,9 +26,11 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function() {
+        window.nombreDIV = 'table-list-locales'
+
         window.dataLocal = {
             // url: 'http://licoreria.localhost.pe:8088/api/pruebas',
-            url: 'api/pruebas',
+            url: 'api/locales',
             type: 'GET'
         }
 
@@ -41,13 +43,13 @@
             { 'data' : 'estado' }
         ]
 
-        window.tableLocal = $('#table-list-locales').DataTable({
+        window.tableLocal = $(`#${nombreDIV}`).DataTable({
             'deferRender': true,
             'processing': true,
             'ajax': dataLocal,
             'paging': true,
-            'pageLength': 100,
-            'lengthMenu': [100, 200, 300, 400, 500],
+            'pageLength': 10,
+            'lengthMenu': [10, 20, 30, 40, 50],
             'scrollY': '300px',
             'scrollX': true,
             'scrollCollapse': true,
@@ -56,7 +58,7 @@
             'columns': columnsLocal
         })
 
-        $('#table-list-locales tbody').on( 'dblclick', 'tr', function () {
+        $(`#${nombreDIV} tbody`).on( 'dblclick', 'tr', function () {
             var dataRow = tableLocal.row(this).data()
             alert( 'Clicked row id ' + dataRow.id );
         } );

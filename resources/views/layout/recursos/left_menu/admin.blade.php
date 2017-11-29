@@ -5,7 +5,7 @@
   <ul class="treeview-menu">
     <li><a href="#" v-on:click="loadOptionMenu('clientes')"> <i class="fa fa-circle-o text-green"></i>  Listar Clientes</a></li>
     <li><a  href="#" v-on:click="loadOptionMenu('locales')"> <i class="fa fa-circle-o text-blue"></i> Listar Locales</a></li>
-    <li><a href="#" v-on:click="loadOptionMenu('clientes')"> <i class="fa fa-circle-o text-yellow"></i> Listar Productos</a></li>
+    <li><a href="#" v-on:click="loadOptionMenu('productos')"> <i class="fa fa-circle-o text-yellow"></i> Listar Productos</a></li>
     <li><a href="#" v-on:click="loadOptionMenu('usuarios')"> <i class="fa fa-circle-o text-red"></i> Listar Usuarios</a></li>
   </ul>
 </li>

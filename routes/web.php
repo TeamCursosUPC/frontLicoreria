@@ -44,7 +44,18 @@ Route::get('/locales/edit',
 
 
 /** Resource Route de Clientes */
-Route::get('/clientes', function () { return view('elements.clientes.index'); });
+Route::get('/clientes',
+    array('as' => 'showCliente', function () { return view('elements.clientes.index'); })
+);
+
+Route::get('/clientes/create', 
+    array('as' => 'createCliente', function () { return view('elements.clientes.create'); })
+);
+
+Route::get('/clientes/edit', 
+    array('as' => 'updateCliente', function () { return view('elements.clientes.update'); })
+);
+
 
 
 
